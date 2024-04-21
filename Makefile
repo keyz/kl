@@ -4,3 +4,11 @@ include $(REPO_ROOT)/shared.mk
 .PHONY: format
 format:
 	go fmt ./...
+
+.PHONY: test
+test:
+	go test -v ./...
+
+.PHONY: tidy
+tidy:
+	go mod tidy
